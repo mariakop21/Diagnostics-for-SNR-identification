@@ -316,7 +316,7 @@ $`\rm f\_NII\_SII\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a10
 ```python
 f_NII_SII_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -354,7 +354,7 @@ $`\rm f\_NII\_SII\_OI(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102x
 ```python
 f_NII_SII_OI = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -392,7 +392,7 @@ $`\rm f\_NII\_SII\_OII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102
 ```python
 f_NII_SII_OII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -430,7 +430,7 @@ $`\rm f\_NII\_OII\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a10
 ```python
 f_NII_OII_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -468,7 +468,7 @@ $`\rm f\_NII\_OI\_OII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102x
 ```python
 f_NII_OI_OII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -506,7 +506,7 @@ $`\rm f\_NII\_OI\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102
 ```python
 f_NII_OI_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -544,7 +544,7 @@ $`\rm f\_SII\_OI\_OII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102x
 ```python
 f_SII_OI_OII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -582,7 +582,7 @@ $`\rm f\_SII\_OII\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a10
 ```python
 f_SII_OII_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -620,7 +620,7 @@ $`\rm f\_SII\_OI\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102
 ```python
 f_SII_OI_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
@@ -658,7 +658,7 @@ $`\rm f\_OI\_OII\_OIII(x, y, z) = a300x^3 + a201x^2z + a210x^2y + a200x^2 + a102
 ```python
 f_OI_OII_OIII = lambda x, y, z:(a300*x**3 + a201*x**2*z + a210*x**2*y + a200*x**2 + a102*x*z**2 + a111*x*y*z + 
                                  a101*x*z + a120*x*y**2 + a110*x*y + a100*x + a003*z**3 + a012*y*z**2 + 
-                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*x*y**2+  
+                                 a002*z**2 + a021*y**2*z + a011*y*z + a001*z + a030*y**3 + a020*y**2+  
                                  a010*y + a000)
 ```
 
