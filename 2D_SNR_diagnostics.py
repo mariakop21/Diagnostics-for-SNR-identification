@@ -1,17 +1,18 @@
 import numpy as np
 import argparse
+from pathlib import Path
 
 ############################################### 2-dimensional diagnostics ##############################################
 # This code checks if a source is a candidate Supernova Remnnant (SNR) or not, 
 # based on 2D diagnostics developed by Kopsacheili M. et al, 2020, MNRAS, 491, 889.
 # One should run: 
-# python 2D_SNR_diagntostics.py -ha [x1] -sii [x2] -nii [x3]  -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagntostic]
+# python 2D_SNR_diagnostics.py -ha [x1] -sii [x2] -nii [x3]  -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagnostic]
 # where [x1], [x2], ..... [x7] is the observed flux/luminosity of a source  of:
 # Hα(6563), [S II](6717,6731), [N II](6583), [O I](6300), [O II](3729,3731), [O III](5007), Hβ(4681) respectively.
 # The parameter 'diag' refers to the diagnostics and it should be one of the following:
 # 1.'SII-NII', 2.'NII-OIII', 3.'SII-OIII', 4.'OI-OIII', 5.'NII-OI', 
 # 6.'OII-OIII', 7.'NII-OII', 8.'SII-OI', 9.'OI-OII', 10.'SII-OII'
-# Those are the diagntostics that combine the emission line ratios: 
+# Those are the diagnostics that combine the emission line ratios: 
 # 1.[S II]/Ha-[N II]/Ha,  2.[N II]/Ha-[O III]/Hb, 3.[S II]/Ha-[O III]/Hb, 4.[O I]/Ha-[O III]/Hb, 5. [N II]/Ha-[O I]/Ha
 # 6.[O II]/Hb-[O III]/Hb, 7.[N II]/Ha-[O II]/Hb,  8.[S II]/Ha-[O I]/Ha,   9.[O I]/Ha-[O II]/Hb,  10.[S II]/Ha-[O II]/Hb
 # The default value of the emission lines is 0.01. This means that if one or more emission lines are not available 
@@ -19,7 +20,9 @@ import argparse
 # There is no default diagnostic so it should be always defined.
 ########################################################################################################################
 factors_2d = []
-with open('factors_2d.txt', 'r') as f:
+# Read the coefficients relative to this script, so it works from any folder
+script_dir = Path(__file__).resolve().parent
+with open(script_dir / 'factors_2d.txt', 'r') as f:
         for line in f.readlines()[1:]:
             factors_2d.append(line.split())
 a30 = (np.array(factors_2d[0][1:])).astype(float)

@@ -10,27 +10,27 @@ $`\rm [N\,II](6583)/H\alpha,\, [S\,II](6716,6731)/H\alpha,\, [O\,I](6300)/H\alph
 
 In <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.491..889K/abstract">Kopsacheili et al. 2020</a> the functions are presented in tables where one can find the coefficients combined with polynomials of 2nd and 3rd order and construct them. Here, these functions can be found in python format and used directly. In every case, in order for a source to be considered as a SNR$`^*`$ the function $f$ should be positive. Apart from the functions, the schematic respesantation of the diagnostics is presented. In every case, red color corresponds to the starburst models (HII regions) and green to the shock models (SNRs). The black lines and the blue surfaces are the lines and surfaces that best separate the two classes (i.e. the decision functions of SVM).
 
-The scripts '2D_SNR_diagsotics.py' and '3D_SNR_diagsotics.py' are also provided, along with the ascii files
-'factors_2d.txt' and 'factors_3d.txt'. The latters contain the factors axx and axxx (as presented below) that are used by the polynomials that describe the diagnostics. The '2D_SNR_diagsotics.py' and '3D_SNR_diagsotics.py' use these files in order to calculate the diagnostics. These scripts can be run directly and return if a source satisfies a given diagnostic or not. In the case of 2D diagnostics, one can run:
+The scripts '2D_SNR_diagnostics.py' and '3D_SNR_diagnostics.py' are also provided, along with the ascii files
+'factors_2d.txt' and 'factors_3d.txt'. The latters contain the factors axx and axxx (as presented below) that are used by the polynomials that describe the diagnostics. The '2D_SNR_diagnostics.py' and '3D_SNR_diagnostics.py' use these files in order to calculate the diagnostics. These scripts can be run directly and return if a source satisfies a given diagnostic or not. In the case of 2D diagnostics, one can run:
 
-<pre xml:lang="latex">python 2D_SNR_diagntostics.py -ha [x1] -sii [x2] -nii [x3] -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagntostic] </pre>
+<pre xml:lang="latex">python 2D_SNR_diagnostics.py -ha [x1] -sii [x2] -nii [x3] -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagnostic] </pre>
 
 where [x1], [x2], ....., [x7] is the observed flux/luminosity of a source  of: $`\rm H\alpha(6563), [S\,II](6717,6731), [N\,II](6583), [O\,I](6300), [O\,II](3729,3731), [O\,III](5007), H\beta(4681)`$ respectively.
 
 The parameter 'diag' refers to the 2D-diagnostics of interest and it should be one of the following:
 <p> 1. 'SII-NII', 2. 'NII-OIII', 3. 'SII-OIII', 4. 'OI-OIII', 5. 'NII-OI', <br>6. 'OII-OIII', 7. 'NII-OII', 8. 'SII-OI', 9. 'OI-OII', 10. 'SII-OII'  
 
-Those are the diagntostics that combine the emission line ratios: <br> 1. [S II]/$`\rm H\alpha`$-[N II]/$`\rm H\alpha`$,  2. [N II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 3. [S II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 4. [O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 5. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$ <br> 6. [O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, 7. [N II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  8. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$,   9. [O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  10. [S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  
+Those are the diagnostics that combine the emission line ratios: <br> 1. [S II]/$`\rm H\alpha`$-[N II]/$`\rm H\alpha`$,  2. [N II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 3. [S II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 4. [O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, 5. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$ <br> 6. [O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, 7. [N II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  8. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$,   9. [O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  10. [S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  
    respectively.
 
 For the 3D diagnostics:
-<pre xml:lang="latex">python 3D_SNR_diagntostics.py -ha [x1] -sii [x2] -nii [x3] -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagntostic]  </pre>
+<pre xml:lang="latex">python 3D_SNR_diagnostics.py -ha [x1] -sii [x2] -nii [x3] -oi [x4] -oii [x5] -oiii [x6] -hb [x7] -diag [diagnostic]  </pre>
 
 The [x1], [x2], ....., [x7] are same as in the 2D case, however now, the parameter 'diag' refers to the 3D diagnostics and it should be one of the following:
 
 1.'NII-SII-OIII', 2.'NII-SII-OI', 3.'NII-SII-OII',  4.'NII-OII-OIII', 5.'NII-OI-OII', <br> 6.'NII-OI-OIII',  7.'SII-OI-OII', 8.'SII-OII-OIII', 9.'SII-OI-OIII', 10.'OI-OII-OIII',
 
-Those are the diagntostics that combine the emission line ratios: <br> 1. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$,  2. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$, 3. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  4. [N II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$,  <br>  5. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O II]/Hb, <br>  6. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$,   7. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$, 8. [S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, 9. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, <br>  10. [O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, <br> respectively.
+Those are the diagnostics that combine the emission line ratios: <br> 1. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$,  2. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$, 3. [N II]/$`\rm H\alpha`$-[S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$,  4. [N II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$,  <br>  5. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O II]/Hb, <br>  6. [N II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$,   7. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$, 8. [S II]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, 9. [S II]/$`\rm H\alpha`$-[O I]/$`\rm H\alpha`$-[O III]/$`\rm H\beta`$, <br>  10. [O I]/$`\rm H\alpha`$-[O II]/$`\rm H\beta`$-[O III]/$`\rm H\beta`$, <br> respectively.
 
 In both cases, the default value of the emission lines is 0.01. This means that if one or more emission lines are not available  they can be skipped (of course in this case the diagnsotics that use these lines are not valid).  There is no default diagnostic so it should be always defined.
 
