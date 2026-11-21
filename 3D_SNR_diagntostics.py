@@ -75,7 +75,7 @@ def f_2d(Ha, SII, NII, OI, OII, OIII, Hb, diagnostic):
 	f = (a300[ind]*x[ind]**3 + a201[ind]*x[ind]**2*z[ind] + a210[ind]*x[ind]**2*y[ind] + a200[ind]*x[ind]**2 + a102[ind]*x[ind]*z[ind]**2 + 
 	     a111[ind]*x[ind]*y[ind]*z[ind] + a101[ind]*x[ind]*z[ind] + a120[ind]*x[ind]*y[ind]**2 + a110[ind]*x[ind]*y[ind] + a100[ind]*x[ind] 
 	     + a003[ind]*z[ind]**3 + a012[ind]*y[ind]*z[ind]**2 + a002[ind]*z[ind]**2 + a021[ind]*y[ind]**2*z[ind] + a011[ind]*y[ind]*z[ind] + 
-	     a001[ind]*z[ind] + a030[ind]*y[ind]**3 + a020[ind]*x[ind]*y[ind]**2 + a010[ind]*y[ind] + a000[ind])
+	     a001[ind]*z[ind] + a030[ind]*y[ind]**3 + a020[ind]*y[ind]**2 + a010[ind]*y[ind] + a000[ind])
 	if f > 0:
 		res = 'yes'
 	else:
